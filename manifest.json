@@ -1,5 +1,6 @@
 {
   "name": "Simple Timer",
+  "short_name": "Simple Timer",
   "description": "A simple configurable countdown timer",
   "start_url": "/",
   "display": "standalone",
