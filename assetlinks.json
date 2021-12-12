@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "mechanical.ink.simple.timer",
+                     "sha256_cert_fingerprints": ["A0:EF:AF:09:7F:26:88:37:CF:11:47:5E:4C:C7:10:35:C9:88:83:70:68:0F:D0:6B:F8:22:F0:92:D9:9D:93:47"] }
+      }
+]
