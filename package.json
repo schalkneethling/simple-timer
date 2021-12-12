@@ -1,0 +1,16 @@
+{
+  "name": "simple-timer",
+  "version": "0.0.1",
+  "description": "A simple countdown timer as a progressive web app",
+  "main": "index.js",
+  "repository": "https://github.com/schalkneethling/simple-timer.git",
+  "author": "Schalk Neethling <sneethling@mozilla.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "favicon:update": "real-favicon check-for-update --fail-on-update favicon-data.json"
+  },
+  "devDependencies": {
+    "cli-real-favicon": "^0.0.8"
+  }
+}
