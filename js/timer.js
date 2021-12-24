@@ -15,6 +15,7 @@
         const audioElement = document.getElementById("audio");
         timerOutput.textContent = "Done";
         audioElement.play();
+        timerOutput.classList.remove("pulse");
         return;
       }
 
