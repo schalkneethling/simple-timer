@@ -45,18 +45,29 @@
 </head>
 
 <body>
-  <div id="timer" class="timer" aria-live="assertive"></div>
-  <div class="button-container">
-    <button id="start-timer" class="start-timer" type="button">start timer</button>
-    <button id="reset-timer" class="reset-timer" type="button">reset timer</button>
+  <div class="app-container">
+    <div class="app">
+      <div id="timer" class="timer" aria-live="assertive"></div>
+      <div class="controls">
+        <button id="start-timer" class="start-timer" type="button">start timer</button>
+        <button id="reset-timer" class="reset-timer" type="button">reset timer</button>
+        <div class="field-group">
+          <label for="duration">Timer duration in minutes</label>
+          <input type="number" name="duration" id="duration" value="25" min="1" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>Made with ♥ by<a href="https://twitter.com/schalkneetling">Schalk
+            Neethling</a>
+        </li>
+        <li><a href="https://github.com/schalkneethling">Contribute on GitHub</a></li>
+        <li>Audio clip from <a
+            href="https://soundbible.com/1446-Bike-Horn.html">StickInTheMud</a></li>
+      </ul>
+    </footer>
   </div>
-  <div class="field-group">
-    <label for="duration">Timer duration in minutes</label>
-    <input type="number" name="duration" id="duration" value="25">
-  </div>
-  <p>Audio clip from <a
-      href="https://soundbible.com/1446-Bike-Horn.html">StickInTheMud</a>
-  </p>
   <audio id="audio" src="./media/audio/bike-horn.mp3" class="hidden"></audio>
   <script src="./js/index.js"></script>
   <script src="./js/timer.js"></script>
