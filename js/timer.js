@@ -34,10 +34,12 @@
         ? `${durationInput} minutes`
         : `${durationInput} minute`;
     countDown(durationInput - 1);
+    timerOutput.classList.add("pulse");
   });
 
   resetTimer.addEventListener("click", () => {
     clearTimeout(timer);
-    timerOutput.textContent = `${timerDuration} minutes`;
+    timerOutput.textContent = `Idle...`;
+    timerOutput.classList.remove("pulse");
   });
 })();
