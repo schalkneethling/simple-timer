@@ -47,8 +47,29 @@
 <body>
   <div class="app-container">
     <div class="app">
-      <div id="timer" class="timer" aria-live="assertive"></div>
+      <div id="timer" class="timer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
+          <g class="ticks">
+            <rect x="97.68" y="183" width="7.5" height="20" rx="3.75" />
+            <rect x="97.68" y="3" width="7.5" height="20" rx="3.75" />
+            <rect x="191.68" y="92" width="7.5" height="20" rx="3.75"
+              transform="translate(297.43 -93.43) rotate(90)" />
+            <rect x="11.68" y="92" width="7.5" height="20" rx="3.75"
+              transform="translate(117.43 86.57) rotate(90)" />
+          </g>
+          <g id="clock-hand" class="clock-hand">
+            <g id="center">
+              <circle cx="101.5" cy="101.69" r="15.25" />
+              <rect x="97.75" y="3.06" width="7.5" height="100" rx="3.75" />
+            </g>
+            <circle class="clock-hand-anchor" cx="101.5" cy="101.69" r="6.1" />
+          </g>
+        </svg>
+      </div>
       <div class="controls">
+        <div id="timer-output" class="timer-output" aria-live="assertive" role="alert">
+          00:00:00
+        </div>
         <button id="start-timer" class="start-timer" type="button">start timer</button>
         <button id="reset-timer" class="reset-timer" type="button">reset timer</button>
         <div class="field-group">

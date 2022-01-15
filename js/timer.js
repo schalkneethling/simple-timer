@@ -1,13 +1,13 @@
 (function () {
   "use strict";
 
-  const timerOutput = document.getElementById("timer");
+  const clockHand = document.getElementById("clock-hand");
+  const timerContainer = document.getElementById("timer");
+  const timerOutput = document.getElementById("timer-output");
   const startTimer = document.getElementById("start-timer");
   const resetTimer = document.getElementById("reset-timer");
 
   let timer;
-
-  timerOutput.textContent = "Idle...";
 
   function countDown(timerDuration) {
     timer = setTimeout(() => {
@@ -35,12 +35,14 @@
         ? `${durationInput} minutes`
         : `${durationInput} minute`;
     countDown(durationInput - 1);
-    timerOutput.classList.add("pulse");
+    clockHand.classList.add("animate");
+    timerContainer.classList.add("pulse");
   });
 
   resetTimer.addEventListener("click", () => {
     clearTimeout(timer);
-    timerOutput.textContent = `Idle...`;
-    timerOutput.classList.remove("pulse");
+    timerOutput.textContent = "00:00:00";
+    clockHand.classList.remove("animate");
+    timerContainer.classList.remove("pulse");
   });
 })();
